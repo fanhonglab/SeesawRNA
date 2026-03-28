@@ -1,0 +1,18 @@
+material = rna
+temperature = 37 
+
+domain preGGG = GGG
+domain aptamer = GGCGAGGACCGGUACGGCCGCCACUCGCC
+domain fwd_toehold = CAU 
+domain rev_toehold = ACAU 
+domain rev_toehold_add = N4 
+domain bm_region = N13
+domain loop_region = CAUAGAGGAGAUACAGA
+domain linker_region = GAACAAGAACUCCGACAAAUC 
+domain GFP_30 = AUGCGUAAAGGAGAAGAACUUUUCACUGGA 
+
+strand ribo_switch_0 = preGGG bm_region* fwd_toehold* aptamer fwd_toehold bm_region rev_toehold_add rev_toehold loop_region rev_toehold* rev_toehold_add* bm_region* linker_region GFP_30
+complex ribo_switch = ribo_switch_0 
+ribo_switch.structure = U3 U13 U3 U29 U3 D21( U17 ) U21 U30 
+
+stop[%] = 40 

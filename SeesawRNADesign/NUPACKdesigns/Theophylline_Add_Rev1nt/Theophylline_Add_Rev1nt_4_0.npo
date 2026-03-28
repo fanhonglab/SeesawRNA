@@ -1,0 +1,75 @@
+general : 
+    version  : 3.2.2
+    start time    : Sat Mar 28 13:28:18 2026
+    elapsed[sec]  :   8.652959
+    input prefix  : NUPACKdesigns/Theophylline_Add_Rev1nt//Theophylline_Add_Rev1nt_4
+physical : 
+    temperature[K]: 310.150000
+    material      : rna1995
+    sodium[M]     :   1.000000
+    magnesium[M]  :   0.000000
+    dangles       :    some
+    min_ppair     :   0.000010
+design : 
+    seed          :  943891
+    population    :       1
+    H_split       :       2
+    N_split       :      12
+    M_bad         :     300
+    M_reopt       :       3
+    M_reseed      :      50
+    f_split       :   0.990000
+    f_passive     :   0.010000
+    f_stringent   :   0.990000
+    f_redecomp    :   0.030000
+    f_refocus     :   0.030000
+    dg_clamp      : -20.000000
+    cutoff[sec]   : 86000000.000000
+    allow wobble  : false
+    add default stops   : false
+sequences:
+    domains:
+        preGGG : GGG
+        preGGG* : CCC
+        aptamer : GGAUACCAGCAUCGUCUUGAUGCCCUUGGCAGCC
+        aptamer* : GGCUGCCAAGGGCAUCAAGACGAUGCUGGUAUCC
+        fwd_toehold : CAU
+        fwd_toehold* : AUG
+        rev_toehold : ACAU
+        rev_toehold* : AUGU
+        rev_toehold_add : G
+        rev_toehold_add* : C
+        bm_region : UUGUAUGAAGGAUUUG
+        bm_region* : CAAAUCCUUCAUACAA
+        loop_region : CAUAGAGGAGAUACAGA
+        loop_region* : UCUGUAUCUCCUCUAUG
+        linker_region : GAACAAGAACUCCGACAAAUC
+        linker_region* : GAUUUGUCGGAGUUCUUGUUC
+        GFP_30 : AUGCGUAAAGGAGAAGAACUUUUCACUGGA
+        GFP_30* : UCCAGUGAAAAGUUCUUCUCCUUUACGCAU
+    strands:
+        ribo_switch_0 : GGGCAAAUCCUUCAUACAAAUGGGAUACCAGCAUCGUCUUGAUGCCCUUGGCAGCCCAUUUGUAUGAAGGAUUUGGACAUCAUAGAGGAGAUACAGAAUGUCCAAAUCCUUCAUACAAGAACAAGAACUCCGACAAAUCAUGCGUAAAGGAGAAGAACUUUUCACUGGA
+design properties:
+    evaluation time:   0.315529
+    on-targets: 1
+    off-targets: 0
+physical results:
+  - name: -default
+    structures: 
+      - name: ribo_switch
+        structure: ...........................................................(((((((((((((((((((((.................)))))))))))))))))))))...................................................
+        sequence:  GGGCAAAUCCUUCAUACAAAUGGGAUACCAGCAUCGUCUUGAUGCCCUUGGCAGCCCAUUUGUAUGAAGGAUUUGGACAUCAUAGAGGAGAUACAGAAUGUCCAAAUCCUUCAUACAAGAACAAGAACUCCGACAAAUCAUGCGUAAAGGAGAAGAACUUUUCACUGGA
+        defect[nt]:  65.091586
+        normalized defect:   0.385157
+        target free energy[kcal/(mol K)]: -29.000000
+        target probability:   0.000000
+        complex free energy[kcal/(mol K)]: -56.050971
+    tubes: []
+mean objective:   0.385157
+objectives:
+  - name: combined_objective
+    defect: 0.385157
+    satisfied: true
+    stop: 0.400000
+    type: combined
+    including: (ribo_switch)
